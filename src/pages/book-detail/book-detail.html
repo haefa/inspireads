@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Book Detail
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <ion-grid center>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card>
+            <img src="assets/imgs/icon.png" class="Item"/>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+          <h2>Panda Book</h2>
+          <p><strong>Panda Writer</strong></p>
+          <p>This book is about pandas.</p>
+      </ion-col>
+      <ion-col col-12>
+        <p>All about pandas. All about pandas. All about pandas.
+            All about pandas. All about pandas. All about pandas.
+        </p>
+      </ion-col>
+
+      <ion-item>
+        <p><strong>Pemilik Buku</strong></p>
+        <ion-col col-3 item-start>
+          <img src="assets/imgs/icon.png" class="ava"/>
+        </ion-col>
+        <p>Nur Meilinda N</p>
+        <p>Bandung, Jawa Barat.</p>
+      </ion-item>
+      <br>
+      <button ion-button full (click)="presentConfirm()">Pinjam</button>
+    </ion-row>
+</ion-grid>
+</ion-content>

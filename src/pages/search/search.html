@@ -1,0 +1,67 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-searchbar>
+    </ion-searchbar>
+
+    <ion-navbar *navbar primary>
+        <ion-title>
+            Title
+        </ion-title>
+    </ion-navbar>
+
+    <p><strong>Popular Book</strong></p>
+    <ion-grid center>
+            <ion-row>
+              <ion-col col-6>
+                <ion-card (click)="detail()">
+                    <img src="assets/imgs/icon.png" class="Item"/>
+                    <p><strong>Panda Book</strong></p>
+                </ion-card>
+              </ion-col>
+              <ion-col col-6>
+                  <ion-card>
+                      <img src="assets/imgs/kirana1.jpg" class="Item"/>
+                      <p><strong>Kirana</strong></p>
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+    </ion-grid>
+
+    <p><strong>Popular Post</strong></p>
+    <ion-card>
+  
+            <img src="assets/imgs/file.jpg"/>
+        
+            <ion-card-content>
+              <ion-card-title>
+                Teman Imaji
+              </ion-card-title>
+              <p class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in volutpat lorem. Nullam condimentum, eros eget feugiat sagittis, neque dui porta enim, nec maximus orci metus eget mi.
+              </p>
+            </ion-card-content>
+        
+            <ion-row no-padding>
+              <ion-col text-right>
+                <button ion-button clear small color="primary" icon-start>
+                  <ion-icon name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+            </ion-row>
+    </ion-card>
+</ion-content>
