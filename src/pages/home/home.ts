@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { PostDetailPage } from '../post-detail/post-detail';
+import { BookDetailPage } from '../book-detail/book-detail';
 
 @Component({
   selector: 'page-home',
@@ -11,4 +13,7 @@ export class HomePage {
 
   }
 
+  details(){
+    this.navCtrl.push(PostDetailPage);
+  }
 }

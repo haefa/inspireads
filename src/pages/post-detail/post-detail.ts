@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-book-detail',
-  templateUrl: 'book-detail.html',
+  selector: 'page-post-detail',
+  templateUrl: 'post-detail.html',
 })
-export class BookDetailPage {
+export class PostDetailPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -14,17 +14,16 @@ export class BookDetailPage {
   ) {
   }
 
-  public show: boolean = false;
+  public hideMe: boolean = false;
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BookDetailPage');
+    console.log('ionViewDidLoad PostDetailPage');
   }
 
   presentConfirm() {
-    
     let alert = this.alertCtrl.create({
       title: '',
-      message: 'Apakah kamu ingin meminjamkan buku ini?',
+      message: 'Apakah kamu ingin meminjam buku ini?',
       buttons: [
         {
           text: 'Kembali',
@@ -34,18 +33,14 @@ export class BookDetailPage {
           }
         },
         {
-          text: 'Pinjamkan',
+          text: 'Pinjam',
           handler: () => {
-            if(this.show == false) this.show = true;
-            else {
-              this.show = false;
-            }
-            console.log('Pinjamkan clicked');
+            this.hideMe = true;
+            console.log('Buy clicked');
           }
         }
       ]
     });
     alert.present();
   }
-
 }

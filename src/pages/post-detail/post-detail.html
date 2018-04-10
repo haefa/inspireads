@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <h1 ion-text color="primary">Beranjak dari Kegalauan</h1>
+    <img src="assets/imgs/beranjak.jpg"/>
+    <p>
+        <strong>Beranjak</strong> merupakan buku indie karya penulis Tumblr: jagungrebus dan jalansaja. Beranjak berisi kumpulan prosa mengenai kehidupan.
+        <br><br>
+        Buku ini sangat menarik karena berisi pesan-pesan kehidupan yang disampaikan dengan renyah.
+        <br><br>
+        Pokoknya keren sekali, habis baca sekali duduk. Dan nggak bosen untuk dibaca berulang-ulang!        
+    </p>
+      <br><br>
+
+<ion-grid center>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card>
+          <img src="assets/imgs/icon.png" class="Item"/>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6 class="book">
+        <br><br>
+        <h2 ion-text color="primary">Beranjak</h2>
+        <p class= "book-detail"><strong>Jalansaja, Jagungrebus</strong></p>
+        <p class= "book-detail">Kumpulan prosa</p>
+    </ion-col>
+    
+
+    <ion-item>
+      <p><strong>Pemilik Buku</strong></p>
+      <ion-col col-3 item-start>
+        <img src="assets/imgs/dhijes.jpg" class="ava"/>
+      </ion-col>
+      <p>Andhika Kartika</p>
+      <p>Bandung, Jawa Barat.</p>
+      <p>+628567224612</p>
+    </ion-item>
+    <br>
+    <button *ngIf="!hideMe" ion-button full (click)="presentConfirm()">Pinjam</button>
+    <button *ngIf="hideMe" ion-button color="light" ion-button full class="clicked">Pinjam</button>
+    
+  </ion-row>
+</ion-grid>
+</ion-content>

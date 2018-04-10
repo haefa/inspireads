@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SearchPage } from '../pages/search/search';
 import { BookDetailPage } from '../pages/book-detail/book-detail';
+import { PostDetailPage } from '../pages/post-detail/post-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     SearchPage, 
-    BookDetailPage
+    BookDetailPage,
+    PostDetailPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     SearchPage,
-    BookDetailPage
+    BookDetailPage,
+    PostDetailPage
   ],
   providers: [
     StatusBar,

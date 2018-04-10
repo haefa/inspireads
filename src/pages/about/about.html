@@ -24,11 +24,11 @@
                 <ion-list>
                   <ion-item (click)="detail()">
                       <ion-avatar item-start item-right>
-                          <img src="assets/imgs/icon.png">
+                          <img src="assets/imgs/file.jpg">
                         </ion-avatar>
-                    <h2><strong>Panda Book</strong></h2>   
+                    <h2><strong>Teman Imaji</strong></h2>   
                     <ion-badge color="danger" item-end>o</ion-badge>
-                    <p>18 Februari 2018</p>
+                    <p>30 April 2018</p>
                   </ion-item>
                 </ion-list>
               </ion-card>
@@ -37,11 +37,11 @@
                   <ion-list>
                     <ion-item (click)="detail()">
                         <ion-avatar item-start item-right>
-                            <img src="assets/imgs/icon.png">
+                            <img src="assets/imgs/webees.png">
                           </ion-avatar>
-                      <h2><strong>Panda Book 2</strong></h2>
+                      <h2><strong>Wanita Berkarir Surga</strong></h2>
                       <ion-badge color="secondary" item-end>o</ion-badge>
-                      <p>02 Januari 2018</p>
+                      <p>06 April 2018</p>
                     </ion-item>
                   </ion-list>
                 </ion-card>
@@ -49,36 +49,51 @@
   
   
         <!-- -------------------------------------------- -->
+      <ion-list *ngSwitchCase="'dipinjam'">
+        <div *ngIf = "!showThis">    
+              <p ion-text color="primary" class = "pinjam" (click)="pinjam()">Lihat permintaan peminjaman</p>
+                <ion-card>
+                    <ion-list>
+                      <ion-item (click)="detail()">
+                          <ion-avatar item-start item-right>
+                              <img src="assets/imgs/kirana2.jpg">
+                            </ion-avatar>
+                        <h2><strong>Happy Little Soul</strong></h2>
+                        <ion-badge color="secondary" item-end>o</ion-badge>
+                        <p>08 April 2018</p>
+                      </ion-item>
+                    </ion-list>
+                  </ion-card>
+      
+                  <ion-card>
+                      <ion-list>
+                        <ion-item (click)="detail()">
+                            <ion-avatar item-start item-right>
+                                <img src="assets/imgs/kirana1.jpg">
+                              </ion-avatar>
+                          <h2><strong>Kirana & Happy Little World</strong></h2>
+                          <ion-badge color="secondary" item-end>o</ion-badge>
+                          <p>02 April 2018</p>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card>   
+      </div>
+
+      <div *ngIf="showThis">
+          <ion-card>
+              <ion-list>
+                <ion-item (click)="detail()">
+                    <ion-avatar item-start item-right>
+                        <img src="assets/imgs/icon.png">
+                      </ion-avatar>
+                  <h2><strong>Beranjak</strong></h2> 
+                  <p>Hafidlotul Fatimah</p>
+                </ion-item>
+              </ion-list>
+            </ion-card>
+      </div>
+    </ion-list> 
     
-        <ion-list *ngSwitchCase="'dipinjam'">
-          
-            <ion-card>
-                <ion-list>
-                  <ion-item (click)="detail()">
-                      <ion-avatar item-start item-right>
-                          <img src="assets/imgs/icon.png">
-                        </ion-avatar>
-                    <h2><strong>Book Panda</strong></h2>
-                    <ion-badge color="secondary" item-end>o</ion-badge>
-                    <p>18 Februari 2018</p>
-                  </ion-item>
-                </ion-list>
-              </ion-card>
-  
-              <ion-card>
-                  <ion-list>
-                    <ion-item (click)="detail()">
-                        <ion-avatar item-start item-right>
-                            <img src="assets/imgs/icon.png">
-                          </ion-avatar>
-                      <h2><strong>Book Panda 2</strong></h2>
-                      <ion-badge color="secondary" item-end>o</ion-badge>
-                      <p>02 Januari 2018</p>
-                    </ion-item>
-                  </ion-list>
-                </ion-card>
-    
-        </ion-list>
       </div>
     
     </ion-content>

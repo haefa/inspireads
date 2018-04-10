@@ -13,6 +13,12 @@ export class AboutPage {
 
   }
 
+  public showThis: boolean = false;
+  
+  pinjam(){
+    this.showThis = true;
+  }
+
   detail(){
     this.navCtrl.push(BookDetailPage);
   }
