@@ -1,7 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler, Searchbar } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage'
 import { MyApp } from './app.component';
+
+import { RegisterPage } from '../pages/register/register';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -14,10 +17,21 @@ import { PostDetailPage } from '../pages/post-detail/post-detail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { FIREBASE_CONFIG } from './firebase.credentials';
+import { Data } from '../shared/providers/data';
+import { HttpModule } from '@angular/http';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+
+    RegisterPage,
+    LoginPage,
+
     AboutPage,
     ContactPage,
     HomePage,
@@ -25,14 +39,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SearchPage, 
     BookDetailPage,
     PostDetailPage
+    
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    
+    IonicStorageModule.forRoot(),
+    HttpModule,
+
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule, 
+    AngularFireAuthModule
   ],
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
+    RegisterPage,
+    LoginPage,
+
     AboutPage,
     ContactPage,
     HomePage,
@@ -40,11 +67,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SearchPage,
     BookDetailPage,
     PostDetailPage
+    
   ],
   providers: [
     StatusBar,
     Searchbar,
     SplashScreen,
+    Data,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
