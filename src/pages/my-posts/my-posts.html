@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>My Posts</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="cards-bg">
+    <ion-card>
+    
+      <img src="assets/imgs/kirana1.jpg"/>
+  
+      <ion-card-content click="detail()">
+        <ion-card-title>
+          <strong ion-text color="primary">Happy Soul: Belajar dari Anak Kecil</strong>
+        </ion-card-title>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in volutpat lorem. Nullam condimentum, eros eget feugiat sagittis, neque dui porta enim, nec maximus orci metus eget mi.
+        </p>
+      </ion-card-content>
+  
+      <ion-row no-padding>
+        <ion-col text-left>
+          <button ion-button clear small color="primary" icon-start>
+            <ion-icon name='creates'></ion-icon>
+            Edit
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+  
+        
+        <ion-fab bottom right>
+            <button ion-fab (click)="newPost()"> <ion-icon name="add"></ion-icon></button>
+        </ion-fab>
+    </ion-content>

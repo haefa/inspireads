@@ -10,9 +10,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SearchPage } from '../pages/search/search';
 import { BookDetailPage } from '../pages/book-detail/book-detail';
 import { PostDetailPage } from '../pages/post-detail/post-detail';
+import { DipinjamPage } from '../pages/dipinjam/dipinjam';
+import { NewPostPage } from '../pages/new-post/new-post';
+import { MyCollectionPage } from '../pages/my-collection/my-collection';
+import { MyPostsPage } from '../pages/my-posts/my-posts';
+import { OnboardingPage } from '../pages/onboarding/onboarding';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoginPage } from '../pages/login/login';
+
+
 
 
 @NgModule({
@@ -24,7 +33,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SearchPage, 
     BookDetailPage,
-    PostDetailPage
+    PostDetailPage,
+    DipinjamPage,
+    NewPostPage,
+    MyCollectionPage,
+    MyPostsPage,
+    OnboardingPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +54,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SearchPage,
     BookDetailPage,
-    PostDetailPage
+    PostDetailPage,
+    DipinjamPage,
+    NewPostPage,
+    MyCollectionPage,
+    MyPostsPage,
+    OnboardingPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

@@ -11,14 +11,14 @@
       <div class="item profilepic-border" align="center">
           <button class="profilebutton" ion-fab> <ion-icon name="create"></ion-icon></button>
           <ion-item>
-              <ion-col col-6 align-self-center item-start >
+              <ion-col col-12 align-self-center item-start >
                   <img class="profile" src="assets/imgs/fatim.png">
               </ion-col>
           </ion-item>
-          
       
           <h2>Hafidlotul Fatimah Ahmad</h2>
-          <p>Suka sekali membaca, terutama membaca buku ilmiah yang berkaitan dengan bidang keilmuan.</p>
+          <p>Menyukai semua hal. Tertarik dengan segala benda yang ada di semesta,
+            percaya dengan semua orang yang ada di dunia.</p>
         </div>
     </ion-item-group>
 
@@ -26,15 +26,15 @@
       <ion-grid center>
         <ion-row>
           <ion-col col-6>
-            <ion-card>
+            <ion-card (click)="koleksi()">
                 <img src="assets/imgs/koleksi.png" class="Item"/>
-                <p><strong>15</strong> buku dikoleksi</p>
+                <p><strong>3</strong> buku dikoleksi</p>
             </ion-card>
           </ion-col>
           <ion-col col-6>
-              <ion-card>
+              <ion-card (click)="baca()">
                   <img src="assets/imgs/bagi.png" class="Item"/>
-                  <p><strong>12</strong> buku telah dibaca</p>
+                  <p><strong>2</strong> buku telah dibaca</p>
               </ion-card>
             </ion-col>
         </ion-row>
@@ -42,9 +42,9 @@
         <ion-row center>
             <ion-col col-3></ion-col>
             <ion-col col-6>
-                <ion-card center>
+                <ion-card center (click)="post()">
                     <img src="assets/imgs/baca.png" class="Item"/>
-                    <p><strong>5</strong> inspirasi dibagikan</p>
+                    <p><strong>1</strong> inspirasi dibagikan</p>
                 </ion-card>
             </ion-col>
             <ion-col col-3></ion-col>

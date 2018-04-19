@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Book
+    </ion-title>
+  </ion-navbar>
+
+  <ion-segment  [(ngModel)]="book">
+    <ion-segment-button value="meminjam">
+      <div class="Header">MEMINJAM</div>
+    </ion-segment-button>
+    <ion-segment-button value="dipinjam">
+      <div class="Header">DIPINJAM</div>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  
+    <div [ngSwitch]="book">
+      <ion-list *ngSwitchCase="'meminjam'">   
+
+        <ion-card>
+          <ion-list>
+            <ion-item (click)="detail()">
+                <ion-avatar item-start item-right>
+                    <img src="assets/imgs/icon.png">
+                  </ion-avatar>
+              <h2><strong>Beranjak</strong></h2>   
+              <ion-badge color="danger" item-end>o</ion-badge>
+              <p>3 Mei 2018</p>
+            </ion-item>
+          </ion-list>
+        </ion-card>  
+        
+        <ion-card>
+              <ion-list>
+                <ion-item (click)="detail()">
+                    <ion-avatar item-start item-right>
+                        <img src="assets/imgs/file.jpg">
+                      </ion-avatar>
+                  <h2><strong>Teman Imaji</strong></h2>   
+                  <ion-badge color="danger" item-end>o</ion-badge>
+                  <p>30 April 2018</p>
+                </ion-item>
+              </ion-list>
+            </ion-card>
+
+            <ion-card>
+                <ion-list>
+                  <ion-item (click)="detail()">
+                      <ion-avatar item-start item-right>
+                          <img src="assets/imgs/webees.png">
+                        </ion-avatar>
+                    <h2><strong>Wanita Berkarir Surga</strong></h2>
+                    <ion-badge color="secondary" item-end>o</ion-badge>
+                    <p>06 April 2018</p>
+                  </ion-item>
+                </ion-list>
+              </ion-card>
+      </ion-list>
+
+
+      <!-- -------------------------------------------- -->
+    <ion-list *ngSwitchCase="'dipinjam'">
+      <div *ngIf = "!showThis">    
+            <p ion-text color="primary" class = "pinjam" (click)="pinjam()">Lihat permintaan peminjaman</p>
+              <ion-card>
+                  <ion-list>
+                    <ion-item (click)="detail()">
+                        <ion-avatar item-start item-right>
+                            <img src="assets/imgs/kirana2.jpg">
+                          </ion-avatar>
+                      <h2><strong>Happy Little Soul</strong></h2>
+                      <ion-badge color="secondary" item-end>o</ion-badge>
+                      <p>08 April 2018</p>
+                    </ion-item>
+                  </ion-list>
+                </ion-card>
+    
+                <ion-card>
+                    <ion-list>
+                      <ion-item (click)="detail()">
+                          <ion-avatar item-start item-right>
+                              <img src="assets/imgs/kirana1.jpg">
+                            </ion-avatar>
+                        <h2><strong>Kirana & Happy Little World</strong></h2>
+                        <ion-badge color="secondary" item-end>o</ion-badge>
+                        <p>02 April 2018</p>
+                      </ion-item>
+                    </ion-list>
+                  </ion-card>   
+    </div>
+
+    <div *ngIf="showThis">
+        <ion-card>
+            <ion-list>
+              <ion-item (click)="detail()">
+                  <ion-avatar item-start item-right>
+                      <img src="assets/imgs/icon.png">
+                    </ion-avatar>
+                <h2><strong>Beranjak</strong></h2> 
+                <p>Hafidlotul Fatimah</p>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+    </div>
+  </ion-list> 
+  
+    </div>
+  
+  </ion-content>
+
+<!-- 
+<ion-content text-left>
+    
+    
+      <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+    <div>
+      <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+                  (ionSlideWillChange)="updateIndicatorPosition()"
+                  (ionSlideDidChange)="updateIndicatorPosition()"
+                  (pan)="updateIndicatorPosition()"
+                  [pager]="false"
+            >
+        <ion-slide>
+          <div>
+            <ion-slides pager>
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+            </ion-slides>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </ion-content> -->

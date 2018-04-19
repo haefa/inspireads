@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      My Book
+    </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content>
+
+      <ion-list>   
+
+          <ion-card>
+              <ion-list>
+                <ion-item (click)="pergi()">
+                    <ion-avatar item-start item-right>
+                        <img src="assets/imgs/file.jpg">
+                      </ion-avatar>
+                  <h2><strong>Bertumbuh</strong></h2>   
+                  <p>Kurniawan Gunadi, Prawita Mutia, dkk</p>
+                </ion-item>
+              </ion-list>
+            </ion-card>
+
+            <ion-card>
+                <ion-list>
+                  <ion-item (click)="detail()">
+                      <ion-avatar item-start item-right>
+                          <img src="assets/imgs/kirana1.jpg">
+                        </ion-avatar>
+                    <h2><strong>Kirana 1</strong></h2>
+                    <p>Retno Hening</p>
+                  </ion-item>
+                </ion-list>
+              </ion-card>
+
+              <ion-card>
+                  <ion-list>
+                    <ion-item (click)="detail()">
+                        <ion-avatar item-start item-right>
+                            <img src="assets/imgs/kirana2.jpg">
+                          </ion-avatar>
+                      <h2><strong>Kirana 2</strong></h2>
+                      <p>Retno Hening</p>
+                    </ion-item>
+                  </ion-list>
+                </ion-card>
+      </ion-list>
+      <ion-fab bottom right>
+          <button ion-fab (click)="newBook()"> <ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+  </ion-content>
+
+<!-- 
+<ion-content text-left>
+    
+    
+      <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+    <div>
+      <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+                  (ionSlideWillChange)="updateIndicatorPosition()"
+                  (ionSlideDidChange)="updateIndicatorPosition()"
+                  (pan)="updateIndicatorPosition()"
+                  [pager]="false"
+            >
+        <ion-slide>
+          <div>
+            <ion-slides pager>
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+              <ion-slide>
+                <img class="slide-image" src="assets/pict/HomeSlide.png"/>
+              </ion-slide>
+          
+            </ion-slides>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+            <h1>Test 1 </h1>
+            <h1>Test 2 </h1>
+            <h1>Test 3 </h1>
+            <h1>Test 4 </h1>
+            <h1>Test 5 </h1>
+            <h1>Test 6 </h1>
+            <h1>Test 7 </h1>
+            <h1>Test 8 </h1>
+            <h1>Test 9 </h1>
+            <h1>Test 10 </h1>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </ion-content> -->

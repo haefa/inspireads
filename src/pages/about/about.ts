@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BookDetailPage } from '../book-detail/book-detail';
+import { DipinjamPage } from '../dipinjam/dipinjam';
 
 @Component({
   selector: 'page-about',
@@ -21,5 +22,9 @@ export class AboutPage {
 
   detail(){
     this.navCtrl.push(BookDetailPage);
+  }
+
+  pergi(){
+    this.navCtrl.setRoot(DipinjamPage);
   }
 }
