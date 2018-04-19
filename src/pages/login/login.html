@@ -1,4 +1,5 @@
 <ion-header>
+<<<<<<< HEAD
     <ion-navbar color="primary">
       <ion-title>
         Login inspi<strong>reads</strong>
@@ -27,3 +28,59 @@
       <a color="primary" (click)="signup()">Belum punya akun? <strong>Daftar</strong> disini.</a>
       </ion-item>
     </ion-content>
+=======
+
+  <ion-navbar color="primary">
+    <ion-title>Masuk ke Inspireads</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form #signinForm="ngForm" novalidate>
+		<ion-list >
+			<ion-item>
+				<ion-label floating ><p class="Head">Email</p></ion-label>
+				<ion-input class="Head2" [(ngModel)]="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" name="email" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			
+			<p class="Warning" ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left>
+				Email harus diisi
+			</p>
+
+			<ion-item>
+				<ion-label floating ><p class="Head">Password</p></ion-label>
+				<ion-input class="Head2" [(ngModel)]="password" name="pass" type="password" minlength="8" #pass="ngModel" required>
+				</ion-input>
+			</ion-item>
+			
+			<p class="Warning" ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left>
+				Password harus diisi
+			</p>
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button class="Button" color="primary" ion-button block (click)="login(signinForm)"><p class="ButtonWord">Masuk</p></button>
+			</ion-col>
+		</ion-row>
+
+    <ion-grid>
+			<ion-row>
+				<ion-col text-center>
+					<p class="Head">
+						<font color="black">Belum punya akun?</font>
+						<a class="Link" (click)="signUp()"> Buat akun.</a>
+					</p>
+				</ion-col>
+			</ion-row>
+    </ion-grid>
+    
+	</form>
+
+</ion-content>
+>>>>>>> 02c7271722d3fc008322e4aaa0f5b8634a1777ff

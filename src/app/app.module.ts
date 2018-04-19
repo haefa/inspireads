@@ -1,7 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler, Searchbar } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage'
 import { MyApp } from './app.component';
+
+import { RegisterPage } from '../pages/register/register';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -23,16 +26,28 @@ import { LoginPage } from '../pages/login/login';
 
 
 
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { FIREBASE_CONFIG } from './firebase.credentials';
+import { Data } from '../shared/providers/data';
+import { HttpModule } from '@angular/http';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+
+    RegisterPage,
+    LoginPage,
+
     AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
     SearchPage, 
     BookDetailPage,
+<<<<<<< HEAD
     PostDetailPage,
     DipinjamPage,
     NewPostPage,
@@ -40,20 +55,37 @@ import { LoginPage } from '../pages/login/login';
     MyPostsPage,
     OnboardingPage,
     LoginPage
+=======
+    PostDetailPage
+    
+>>>>>>> 02c7271722d3fc008322e4aaa0f5b8634a1777ff
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    
+    IonicStorageModule.forRoot(),
+    HttpModule,
+
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule, 
+    AngularFireAuthModule
   ],
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
+    RegisterPage,
+    LoginPage,
+
     AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
     SearchPage,
     BookDetailPage,
+<<<<<<< HEAD
     PostDetailPage,
     DipinjamPage,
     NewPostPage,
@@ -61,11 +93,16 @@ import { LoginPage } from '../pages/login/login';
     MyPostsPage,
     OnboardingPage,
     LoginPage
+=======
+    PostDetailPage
+    
+>>>>>>> 02c7271722d3fc008322e4aaa0f5b8634a1777ff
   ],
   providers: [
     StatusBar,
     Searchbar,
     SplashScreen,
+    Data,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
